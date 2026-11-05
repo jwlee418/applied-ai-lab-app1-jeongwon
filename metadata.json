@@ -1,0 +1,6 @@
+{
+  "name": "Regional Sales Revenue & AI Shift Analyzer",
+  "description": "Upload sales order CSV data to analyze revenue by region and quarter with interactive charts, tables, and AI-generated Q2 to Q3 regional change summaries grounded in calculated numbers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
