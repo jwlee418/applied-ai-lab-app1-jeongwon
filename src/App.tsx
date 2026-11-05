@@ -274,7 +274,14 @@ Q4,Europe,Online Store,Developer Pro Tools,460,0.05,138000`;
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
+    <div className="min-h-screen bg-gradient-to-br from-pink-100/90 via-purple-100/80 to-fuchsia-100/90 text-slate-900 flex flex-col font-sans selection:bg-pink-500 selection:text-white relative">
+      {/* Pink and purple ambient atmospheric background glows */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10" aria-hidden="true">
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-pink-300/35 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 -right-32 w-[28rem] h-[28rem] bg-purple-300/35 rounded-full blur-3xl" />
+        <div className="absolute -bottom-32 left-1/4 w-96 h-96 bg-fuchsia-300/30 rounded-full blur-3xl" />
+      </div>
+
       {/* Header */}
       <Header
         onLoadSample={handleLoadSample}
@@ -438,9 +445,9 @@ Q4,Europe,Online Store,Developer Pro Tools,460,0.05,138000`;
         )}
 
         {/* Quick Link bar for Raw CSV Data */}
-        <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs">
+        <div className="p-4 rounded-xl bg-white/90 backdrop-blur-xs border border-pink-200/80 shadow-2xs flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs">
           <div className="flex items-center gap-2 text-slate-600">
-            <Database className="w-4 h-4 text-indigo-600" />
+            <Database className="w-4 h-4 text-purple-600" />
             <span>
               Loaded dataset: <strong className="text-slate-900 font-medium">{currentFilename}</strong> ({parseResult.orders.length} order lines)
             </span>
@@ -457,7 +464,7 @@ Q4,Europe,Online Store,Developer Pro Tools,460,0.05,138000`;
             <span className="text-slate-300">|</span>
             <button
               onClick={() => setIsRawDataOpen(true)}
-              className="text-indigo-600 hover:text-indigo-800 font-medium hover:underline inline-flex items-center gap-1"
+              className="text-purple-600 hover:text-purple-800 font-medium hover:underline inline-flex items-center gap-1"
             >
               <FileSpreadsheet className="w-3.5 h-3.5" />
               <span>Browse All Records</span>
@@ -501,7 +508,7 @@ Q4,Europe,Online Store,Developer Pro Tools,460,0.05,138000`;
       />
 
       {/* Footer */}
-      <footer className="border-t border-slate-200 bg-white py-5 text-center text-xs text-slate-500">
+      <footer className="border-t border-pink-200/80 bg-white/75 backdrop-blur-xs py-5 text-center text-xs text-slate-500">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p>© Regional Sales Orders Analyzer • Automated Data Sanitization Active</p>
           <div className="flex items-center gap-3 text-slate-400">

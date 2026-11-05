@@ -43,11 +43,11 @@ export const Header: React.FC<HeaderProps> = ({
   isHygieneActive,
 }) => {
   return (
-    <header className="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-40 shadow-xs">
+    <header className="border-b border-pink-200/80 bg-white/85 backdrop-blur sticky top-0 z-40 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-blue-600 to-sky-500 flex items-center justify-center text-white shadow-md shadow-indigo-200 shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 via-fuchsia-600 to-pink-500 flex items-center justify-center text-white shadow-md shadow-pink-300/40 shrink-0">
               <BarChart3 className="w-5 h-5" />
             </div>
             <div>
@@ -55,8 +55,8 @@ export const Header: React.FC<HeaderProps> = ({
                 <h1 className="text-xl font-bold tracking-tight text-slate-900">
                   Regional Sales &amp; AI Shift Analyzer
                 </h1>
-                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700 border border-indigo-200/60">
-                  <Sparkles className="w-3 h-3 mr-1 text-indigo-500" />
+                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-purple-50 text-purple-700 border border-purple-200/60">
+                  <Sparkles className="w-3 h-3 mr-1 text-pink-500" />
                   Gemini 3.8 Flash
                 </span>
 
@@ -105,12 +105,12 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={onLoadSample}
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border shadow-xs ${
                 isSampleActive
-                  ? 'bg-indigo-50 text-indigo-700 border-indigo-200 hover:bg-indigo-100'
+                  ? 'bg-purple-50 text-purple-700 border-purple-200 hover:bg-purple-100'
                   : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
               }`}
               title="Load standard multi-region sample sales orders"
             >
-              <RefreshCw className="w-3.5 h-3.5 text-indigo-500" />
+              <RefreshCw className="w-3.5 h-3.5 text-purple-500" />
               <span>Sample CSV</span>
             </button>
 
@@ -125,7 +125,7 @@ export const Header: React.FC<HeaderProps> = ({
 
             <button
               onClick={onOpenUpload}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition-colors shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 transition-colors shadow-sm shadow-pink-200"
             >
               <Upload className="w-3.5 h-3.5" />
               <span>Upload CSV</span>
